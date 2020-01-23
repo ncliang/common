@@ -427,36 +427,6 @@
                     </dependencies>
                 </plugin>
                 <plugin>
-                    <groupId>org.owasp</groupId>
-                    <artifactId>dependency-check-maven</artifactId>
-                    <version>${dependency.check.version}</version>
-                    <dependencies>
-                        <dependency>
-                            <groupId>io.confluent</groupId>
-                            <artifactId>build-tools</artifactId>
-                            <version>${confluent.version}</version>
-                        </dependency>
-                    </dependencies>
-                    <configuration>
-                        <suppressionFiles>
-                            <suppressionFile>${dependency.check.suppressions.location}</suppressionFile>
-                        </suppressionFiles>
-                        <cveUrlModified>https://s3-us-west-2.amazonaws.com/confluent-packaging-tools/nvd.nist.gov/nvdcve-1.1-modified.json.gz</cveUrlModified>
-                        <cveUrlBase>https://s3-us-west-2.amazonaws.com/confluent-packaging-tools/nvd.nist.gov/nvdcve-1.1-%d.json.gz</cveUrlBase>
-                        <skipSystemScope>true</skipSystemScope>
-                        <skipProvidedScope>true</skipProvidedScope>
-                        <skipTestScope>true</skipTestScope>
-                        <format>xml</format>
-                    </configuration>
-                    <executions>
-                        <execution>
-                            <goals>
-                                <goal>check</goal>
-                            </goals>
-                        </execution>
-                    </executions>
-                </plugin>
-                <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-assembly-plugin</artifactId>
                     <version>${maven-assembly.version}</version>
